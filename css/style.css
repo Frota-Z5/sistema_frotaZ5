@@ -33,6 +33,11 @@ nav ul li a:hover {
   color: var(--primary-color);
 }
 
+h1 {
+  text-align: center;
+  color: #003B67;
+}
+
 /* Estilo do menu suspenso */
 .dropdown-content {
   display: none;
