@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.cadastro {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#intro_form {
+
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+
+
+}
+
+#intro_form h1 {
+    font-size: 45px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+#intro_form small {
+    font-size: 10px;
+    display: inline-table;
+    text-decoration: none;
+    color: blue;
+}
+
+#intro_form .cadastro {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#intro_form .cadastro:hover {
+    color: #0056b3;
+}
+
+#intro_form p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+
+/* Estilizando o botão */
+#btn {
+    background-color: #4CAF50;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+    / cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+#btn:hover {
+    background-color: #45a049;
+
+}
+
+/* Efeito ao pressionar o botão */
+#btn:active {}
+
+#formulario a {
+    color: blue;
+    text-decoration: none;
+
+}
+
+#formulario a:hover {
+    color: red;
+
+}

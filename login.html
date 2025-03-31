@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=main, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+
+        <div id="intro_form">
+            <h1>
+                <strong>LOGIN</strong>
+                <span>|</span>
+                <a href="#" class="cadastro">
+                    <small>NÃO TEM CADASTRO?</small>
+                    <span>CADASTRE-SE</span>
+                </a>
+            </h1>
+            <p>Já possui uma conta? Acesse preenchendo seu CPF/CNPJ e senha abaixo.</p>
+        </div>
+        <div id="formulario">
+            <form action="/pages/cadastro_clientes.html" id="login" class="form_login" method="post"
+                novalidate="novalidate">
+                <div class="campo">
+                    <label>Digite seu CPF/CNPJ:</label>
+                    <input class="CPF" type="text" autocomplete="off" placeholder="000.000.000-00"
+                        data-bind="value: loginEmail" maxlength="14">
+
+                </div>
+                <div class="campo">
+                    <label>Digite sua senha:</label>
+                    <input type="password" autocomplete="off" placeholder="Digite sua senha" name="password"
+                        id="password" data-bind="value: loginPassword">
+
+                </div>
+
+                <a href="">Esqueceu a senha?</strong></a>
+                <br>
+                <div class="button">
+                    <button type="submit" id="btn">Entrar</button>
+                </div>
+            </form>
+        </div>
+        </h1>
+
+        <script src="js/login.js"></script>
+    </main>
+</body>
+
+</html>
