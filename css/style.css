@@ -1,7 +1,6 @@
 /* Estilização do header */
 header {
-  background: #674d69;
-  color: #f2dfb1;
+  background: #003B67;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -9,9 +8,14 @@ header {
 }
 
 header div a {
-  color: #f2dfb1;
+  color: white;
   font-size: 30px;
   text-decoration: none;
+}
+
+header div a img {
+  width: 80px;
+  height: 80px;
 }
 
 /* Menu de navegação */
@@ -22,49 +26,153 @@ nav ul {
 }
 
 nav ul li a {
-  color: #f2dfb1;
+  color: white;
   text-decoration: none;
 }
 nav ul li a:hover {
-  color: #ff7c70;
+  color: var(--primary-color);
 }
-button {
-  background: #ff7c70;
-  list-style: none;
-  color: #f2dfb1;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 300px;
+  background-image: url('../img/truck2.webp');
+  background-size: cover;
+  background-position: center;
+  color: #003B67;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.banner p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #003B67;
   font-size: 16px;
-  border-radius: 5px;
-}
-button a {
-  color: #f2dfb1;
+  font-weight: bold;
   text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
 }
-button:hover {
-  background: #674d69;
-  color: #f2dfb1;
-  transition: background-color 0.3s ease;
+
+.banner .btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+.banner .btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
 }
 
 /* Estilização do main */
-main {
-  padding: 20px;
-  max-width: 800px;
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 40px;
+  max-width: 1200px;
   margin: auto;
-  margin-top: 20px;
-  color: #2e292e;
 }
 
+.main-content img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.main-text h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.main-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.main-text .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.main-text .btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.main-content.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #25D366; /* Cor verde do WhatsApp */
+  color: #FFFFFF; /* Cor do ícone */
+  width: 60px; /* Largura igual à altura */
+  height: 60px; /* Altura igual à largura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Torna o botão redondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  font-size: 24px; /* Tamanho do ícone */
+  z-index: 999; /* Garante que o botão fique acima de outros elementos */
+  transition: background 0.3s; /* Transição suave */
+  text-decoration: none; /* Remove sublinhado do link */
+}
+.whatsapp-btn:hover {
+  background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+  text-decoration: none; /* Garante que não haja sublinhado */
+}
 
 /* Estilização do footer */
 footer {
-  background: #674d69;
-  color: #f2dfb1;
+  background: #003B67;
+  color: white;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  padding: 5px;
+  position: relative;
   bottom: 0;
   width: 100%;
+}
+
+footer .social-icons i{
+  margin: 0 10px;
+  color: white;
+}
+footer .social-icons i:hover {
+  color: var(--primary-color);
 }
