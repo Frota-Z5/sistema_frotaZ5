@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>FrotaZ5 - Home</title>
 
 </head>
@@ -13,30 +14,118 @@
 <body>
   <header>
     <div>
-      <a href="index.html"><img src="img/" alt="FrotaZ5"></a>
+      <a href="index.html"><img src="img/logo.png" alt="FrotaZ5"></a>
     </div>
     <nav>
       <ul>
         <li>
           <a href="/pages/sobre.html">Sobre</a>
         </li>
-        <li>
-          <a href="/pages/inicial_sistema.html">Funcionalidades</a>
+        <li class="dropdown">
+          <a href="/pages/inicial_sistema.html" class="dropdown-btn">Funcionalidades ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Recurso 1</a></li>
+            <li><a href="#">Recurso 2</a></li>
+            <li><a href="#">Recurso 3</a></li>
+          </ul>
         </li>
         <li>
           <a href="/pages/contato.html">Contato</a>
         </li>
       </ul>
     </nav>
-    <button><a href="/pages/login.html">Login</a></button>
+    <a class="btn" href="/pages/login.html">Login</a>
   </header>
+  <!-- banner -->
+  <section>
+    <div class="banner">
+      <h1>Bem-vindo à FrotaZ5</h1>
+      <p>Seu transporte confiável e seguro. <br> Conectamos você ao destino com <br> eficiência e qualidade.</p>
+      <a href="pages/sobre.html" class="btn">Saiba Mais</a>
+    </div>
+  </section>
+  <!-- main -->
   <main>
-    <h1>Bem-Vindos ao Frota Z5</h1>
+    <!-- titulo -->
+    <h1>Principais Recursos</h1>
+    <div class="main-content">
+      <div class="main-text">
+        <h2>Controle de Abastecimento</h2>
+        <p>Tenha o controle total de bombas internas, garantindo um gerenciamento eficaz dos recursos de combustível.
+        </p>
+        <p>Supervisione os abastecimentos, organizando e monitorando todas as operações de reabastecimento.</p>
+        <p>Gerencie ordens e requisições, otimizando processos e garantindo que todas as demandas sejam atendidas.</p>
+        <p>Administre o faturamento, contratos e todas as funções de abastecimento que sua frota precisa ter.</p>
+        <a href="pages/inicial_sistema.html" class="btn">Agendar demonstração gratuita</a>
+      </div>
+      <div class="main-image">
+        <img src="img/abastecimento.jpg" alt="Abastecimento de veículo">
+      </div>
+    </div>
+    <div class="main-content reverse">
+      <div class="main-image">
+        <img src="img/pneus.jpg" alt="Controle de Pneus">
+      </div>
+      <div class="main-text">
+        <h2>Controle de Pneus</h2>
+        <p>Saiba a localização exata que cada pneu está, seja no almoxarifado ou na posição alocada no eixo.</p>
+        <p>Tenha controle dos custos associados a cada pneu, permitindo uma gestão financeira mais eficiente.</p>
+        <p>Gerencie as manutenções e recapagens, mantendo um registro detalhado e organizado das intervenções
+          realizadas.
+        </p>
+        <p>Monitore os km rodados e outros detalhes, oferecendo uma visão completa e integrada do uso e desempenho dos
+          pneus.</p>
+        <a href="pages/inicial_sistema.html" class="btn">Agendar demonstração gratuita</a>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="main-text">
+        <h2>Controle de manutenções</h2>
+        <p>Controle e gerencie as manutenções dos veículos, garantindo eficiência e organização.</p>
+        <p>Administre as NF e entradas de peças, mantendo o estoque sempre atualizado.</p>
+        <p>Organize as ordens de serviços, facilitando o acompanhamento e a execução das tarefas programadas.</p>
+        <p>Supervisione os pedidos de compras, controles de garantias e muito mais, otimizando todos os aspectos das
+          operações comerciais.</p>
+        <a href="pages/inicial_sistema.html" class="btn">Agendar demonstração gratuita</a>
+      </div>
+      <div class="main-image">
+        <img src="img/manutencao.jpg" alt="Abastecimento de veículo">
+      </div>
+    </div>
+    <div class="main-content reverse">
+      <div class="main-image">
+        <img src="img/documento.jpg" alt="Controle de Pneus">
+      </div>
+      <div class="main-text">
+        <h2>Controle de Documentos</h2>
+        <p>Controle com praticidade todos os documentos dos veículos, mantendo-os organizados e acessíveis.</p>
+        <p>Gerencie o IPVA e os seguros, assegurando que todos os pagamentos e renovações estejam em dia.</p>
+        <p>Administre as CNHs e multas de trânsito, monitorando e tratando as infrações de forma eficiente.
+        </p>
+        <p>Supervisione os documentos de compra e venda, controle de ocorrências e mais, mantendo todos os registros
+          atualizados e integrados.</p>
+        <a href="pages/inicial_sistema.html" class="btn">Agendar demonstração gratuita</a>
+      </div>
+    </div>
+    <!-- icon do whatsapp -->
+    <a href="https://wa.me/5541995016354" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
   </main>
+  <!-- footer -->
   <footer>
     <p>Frota Z5</p>
+
+    <!-- Ícones de redes sociais -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://wa.me/5541995016354"><i class="fab fa-whatsapp fa-2x"></i></a>
+    </div>
     <p>©2025 - Todos os direitos reservados</p>
+    <br>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
 
