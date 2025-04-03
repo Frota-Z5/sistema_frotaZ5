@@ -180,3 +180,10 @@ fieldset {
       grid-template-columns: 1fr; /* Usa 1 coluna em telas pequenas */
   }
 }
+footer .social-icons i{
+  margin: 0 10px;
+  color: white;
+}
+footer .social-icons i:hover {
+  color: var(--primary-color);
+}
