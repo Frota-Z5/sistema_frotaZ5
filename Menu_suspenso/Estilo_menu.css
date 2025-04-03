@@ -119,7 +119,10 @@ a img {
     width: 100px;
     height: 100px;
 }
-
+.icon-menu{
+  width: 30px;
+  height: 30px;
+}
 a:hover img {
     transform: scale(1.1);
 }
