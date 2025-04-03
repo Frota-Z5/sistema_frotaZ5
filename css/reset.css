@@ -4,3 +4,13 @@ html, body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #00c6ff;
+  --background-color: #f4f4f4;
+  --text-color: white;
+  --btn-hover-color: #0056b3;
+  --text-color-dark: black;
+  --background-header: 003B67;
+}
