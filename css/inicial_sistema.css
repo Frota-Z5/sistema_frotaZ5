@@ -1,0 +1,200 @@
+/* Estilização do header */
+header {
+    background: #013b68;
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+header div a {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  /* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    width: 100%;    
+  }
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+nav ul li a:hover {
+    color: #ff7c70;
+  }
+div class a {
+    background-color: black;
+    color: black;
+}  
+button {
+    background:white;
+    list-style: none;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    
+  }
+button a {
+    color: black;
+    text-decoration: none;
+  }
+button:hover {
+    background: white;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilização do main */
+main {
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  /* Estilização do footer */
+footer {
+    background: #013b68;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+fieldset {
+    border: 2px solid #ccc;
+    background: white;
+    border-radius: 10px;
+    width: 50%; /* Define uma largura para o fieldset */
+    max-width: 900;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 10px;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.icon-container a span {
+  color: #000000; /* Cor preta */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+a img {
+    transition: transform 0.3s ease;
+    width: 100px;
+    height: 100px;
+}
+.icon-menu{
+  width: 30px;
+  height: 30px;
+}
+a:hover img {
+    transform: scale(1.1);
+}
+
+span {
+    margin-top: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+fieldset h4 {
+  color: #000000; 
+}
+h1 {
+  color: #000000;
+}
+.menu-container a span 
+{
+  color: #000000; 
+}
+legend {
+  color: #000000; /* Define a cor do texto como preto */
+}
+ul li {
+  color: #000000; /* Define a cor do texto como preto */
+}
+
+ul li a {
+  color: #000000; /* Também define a cor do texto dos links como preto */
+}
+/* Estilo geral para o formulário */
+fieldset section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+/* Estilos para os inputs e selects */
+fieldset input,
+fieldset select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Estilo do form para usar 3 colunas com grid */
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+  gap: 20px; /* Espaçamento entre os campos */
+}
+/* Responsividade: Ajusta para 1 coluna em telas menores */
+@media (max-width: 768px) {
+  fieldset {
+      grid-template-columns: 1fr; /* Usa 1 coluna em telas pequenas */
+  }
+}
+footer .social-icons i{
+  margin: 0 10px;
+  color: white;
+}
+footer .social-icons i:hover {
+  color: var(--primary-color);
+}
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #003B67;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Veículos - Frota Z5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #003B67;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    header img {
+      height: 100px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 0 10px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    input, select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #003366;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #003B67;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eeeeee;
+    }
+
+    #cadastroForm {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><a href="/index.html"><img src="/img/logo.png" alt="Frota Z5"></a></div>
+  <div class="btn-group">
+    <a class="btn" href="/pages/cadastro/cadastros.html">Voltar</a>
+    <a class="btn" href="/index.html">Sair do Sistema</a>
+  </div>
+</header>
+<!-- BOTÃO DE NAVEGAÇÃO 
+<div class="btn-group" </div> -->
+    <nav>
+    <button class="btn" onclick="mostrarFormulario()">Novo</button>
+    <button class="btn" onclick="mostrarLista()">Veículos Cadastrados</button> 
+    </nav>
+
+<main>
+  
+
+  <!-- Formulário de Cadastro -->
+  <form id="cadastroForm" action="#" method="post">
+    <fieldset>
+      <legend>Dados do Veículo</legend>
+      <div class="form-grid">
+        <label>Marca:
+          <input type="text" name="marca" placeholder="Marca" />
+        </label>
+        <label>Modelo:
+          <input type="text" name="modelo" placeholder="Modelo" />
+        </label>
+        <label>Placa:
+          <input type="text" name="placa" placeholder="Placa" />
+        </label>
+        <label>Chassi:
+          <input type="text" name="chassi" placeholder="Chassi" />
+        </label>
+        <label>Renavam:
+          <input type="text" name="renavam" placeholder="Renavam" />
+        </label>
+        <label>Cor:
+          <input type="text" name="cor" placeholder="Cor" />
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Características do Veículo</legend>
+      <div class="form-grid">
+        <label>Ano de Fabricação:
+          <input type="text" name="ano" placeholder="Ano de Fabricação" />
+        </label>
+        <label>Capacidade de Carga:
+          <input type="text" name="capacidade" placeholder="Capacidade de Carga" />
+        </label>
+        <label>Proprietário:
+          <select name="proprietario">
+            <option value="">Selecione</option>
+            <option value="proprio">Próprio</option>
+            <option value="terceiro">Terceiro</option>
+          </select>
+        </label>
+        <label>Eixos:
+          <select name="eixos">
+            <option value="">Selecione</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+
+    <div style="text-align: right;">
+      <button type="submit" class="btn">Salvar</button>
+    </div>
+  </form>
+
+  <!-- Lista de veículos cadastrados -->
+  <div id="listaVeiculos">
+    <h3>Veículos Cadastrados</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Placa</th>
+          <th>Cor</th>
+          <th>Ano</th>
+          <th>Proprietário</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Volkswagen</td>
+          <td>Constellation</td>
+          <td>ABC1D23</td>
+          <td>Branco</td>
+          <td>2020</td>
+          <td>Próprio</td>
+        </tr>
+        <tr>
+          <td>Mercedes</td>
+          <td>Atego</td>
+          <td>XYZ4E56</td>
+          <td>Azul</td>
+          <td>2021</td>
+          <td>Terceiro</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  <p>Frota Z5</p>
+  <p>©2025 - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  function mostrarFormulario() {
+    document.getElementById("cadastroForm").style.display = "block";
+    document.getElementById("listaVeiculos").style.display = "none";
+  }
+
+  function mostrarLista() {
+    document.getElementById("cadastroForm").style.display = "none";
+    document.getElementById("listaVeiculos").style.display = "block";
+  }
+
+  // Mostrar lista por padrão
+  window.onload = mostrarLista;
+</script>
+
+</body>
+</html>
+
+
+<!-- CADASTRO DE VEÍCULOS ANTIGO
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiculos</title>
+    <link rel="stylesheet" href="/css/inicial_sistema.css">
+    
+</head>
+<body>
+    <header>
+        <div> <a href="/index.html"><img src="/img/logo.png" alt="FrotaZ5"> </a> </div>
+            
+        <button> <a href="/pages/cadastro/cadastros.html">Voltar</a> </button>
+        <button> <a href="/index.html">Sair do Sistema</a> </button>
+            
+    </header>
+    <main>
+        <fieldset>
+            <legend><strong> <h2>Cadastro de Veículos </h2> </strong></legend>
+           <section>
+                <h4>Marca</h4>
+                <input type="text" placeholder="Marca">
+            </section>
+            <section>
+                <h4>Modelo</h4>
+                <input type="text" placeholder="Modelo">
+            </section>
+            <section>
+                <h4>Placa</h4>
+                <input type="text" placeholder="Placa">
+            </section>
+            <section>
+                <h4>Chassi</h4>
+                <input type="text" placeholder="Chassi">
+            </section>
+            <section>
+                <h4>Renavam</h4>
+                <input type="text" placeholder="Renavam">
+            </section>
+            <section>
+                <h4>Cor</h4>
+                <input type="text" placeholder="Cor">
+            </section>
+            <section>
+                <h4>Ano de Fabricação</h4>
+                <input type="text" placeholder="Ano de Fabricação">
+            </section>
+            <section>
+                <h4>Capacidade de Carga</h4>
+                <input type="text" placeholder="Capacidade de Carga">
+            </section>
+            <section>
+                <h4>Proprietário</h4>
+                <select>
+                    <option value="">Proprietário</option>
+                    <option>Proprio</option>
+                    <option>Terceiro</option>
+                </select>
+            </section>
+            <section>
+                <h4>Eixos</h4>
+                <select>
+                    <option value="">Eixos</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </section>
+        
+    </main>
+    
+    <footer>
+        <p>Frota Z5</p>
+        <p>©2025 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+-->
