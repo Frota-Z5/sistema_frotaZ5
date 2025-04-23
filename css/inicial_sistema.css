@@ -187,3 +187,14 @@ footer .social-icons i{
 footer .social-icons i:hover {
   color: var(--primary-color);
 }
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #003B67;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}

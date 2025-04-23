@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/inicial_sistema.css">
+ 
 
   <title>FrotaZ5 - Home</title>
 
@@ -13,23 +14,36 @@
 <body>
   <header>
     <div>
-        <a href="index.html"><img src="/img/logo.png" alt="FrotaZ5"></a>
+        <a href="/index.html"><img src="/img/logo.png" alt="FrotaZ5"></a>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="https://wa.me/5569984279799">
-            <img src="https://img.icons8.com/color/256/whatsapp.png" alt="WhatsApp" width="10" height="10"/>
-             Agende com nosso suporte Tecnico
-          </a>        </li>
-      </ul>
-    </nav>
+    <div>
+      <a class="btn" href="/pages/inicial_sistema.html">Login</a>
+    </div>
+    
   </header>
   <main>
     
-    <h1> Agende suporte com nossa Equipe Técnica</h1>
-    
-  
+    <h1>Agende suporte com nossa Equipe Técnica </h1>
+   
+    <nav style="display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 50px;">
+        
+      <!-- Botão de Agendamento -->
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3K8aM8VuDDln5AT7Ft_8efNoHLQJE9DyNREvlZmOq47ji97JbeS_E1u2DdoITDbKjeaSgybGoV" 
+        target="_blank" 
+        style="display: flex; align-items: center; text-decoration: none; gap: 8px;">
+          <img src="/img/calendario.png" alt="Ícone de calendário" width="30" height="30">
+          <span style="color: #003B67; font-size: 16px; font-weight: bold;">Clique na Agenda</span>
+      </a>
+
+      <!-- Botão do WhatsApp -->
+      <a href="https://wa.me/5569984279799" target="_blank"
+        style="display: flex; align-items: center; text-decoration: none; gap: 8px;">
+          <img src="https://img.icons8.com/color/256/whatsapp.png" alt="WhatsApp" width="30" height="30">
+          <span style="color: #25D366; font-size: 16px; font-weight: bold;">Fale com nosso Suporte Técnico</span>
+      </a>
+
+    </nav>
+
 
   </main>
   <footer>
